@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Page</title>
+</head>
+<body>
+    <h1>Student Risk Prediction</h1>
+
+    <form method="POST">
+        <input type="number" name="attendance" placeholder="Attendance %" required><br><br>
+        <input type="number" name="marks" placeholder="Marks %" required><br><br>
+        <input type="number" name="assignments" placeholder="Assignments out of 10" required><br><br>
+        <input type="number" name="study_hours" placeholder="Study Hours" required><br><br>
+
+        <button type="submit">Predict Risk</button>
+    </form>
+
+    {% if result %}
+        <h2>Academic Risk Level: {{ result }}</h2>
+    {% endif %}
+
+    <br>
+    <a href="/">Logout</a>
+</body>
+</html>
